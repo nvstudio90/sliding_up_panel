@@ -236,6 +236,13 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
     );
   }
 
+
+  @override
+  void didUpdateWidget(SlidingUpPanel oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    widget.controller?._addState(this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
