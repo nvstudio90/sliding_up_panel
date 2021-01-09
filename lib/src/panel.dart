@@ -215,7 +215,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
 
   ScrollController _sc;
   bool _scrollingEnabled = false;
-  VelocityTracker _vt = new VelocityTracker();
+  VelocityTracker _vt = new VelocityTracker.withKind(PointerDeviceKind.touch);
 
   bool _isPanelVisible = true;
 
